@@ -28,3 +28,16 @@ function checkCals (cals, target) { //this function checks if calories > target,
 
 console.log(checkCals(2000, 2200));
 
+function runKms (done, kmTarget) {
+    if (kmTarget > done) {
+        return kmTarget - done + " km remaining on your run"
+    } else if (kmTarget === done) {
+        return "You have completed your run!"
+    } else if (kmTarget < done) {
+        return done - kmTarget + " km over target for your run";
+    }
+}
+
+console.log(runKms(3,5));
+console.log(runKms(5,5));
+console.log(runKms(7,5));
