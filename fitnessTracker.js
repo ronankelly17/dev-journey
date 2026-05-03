@@ -33,4 +33,23 @@ while (answer !== "exit") {  //Loop to check whether user is done using the prog
         workouts.push(workout); //pushes workouts to array
         console.log(workouts);
     }
+
+    if (answer === "view") {
+        
+//1. user types view.
+//2. loop starts. 
+//3. get workout at position i. 
+//4. access name + calories. 
+//5. print it. 
+//6. repeat for next workout.
+
+        for (let i = 0; i < workouts.length; i++) {
+            let currentWorkout = workouts[i]; //this gives the current workout in the array
+
+            currentWorkout.name; //this accesses the array and calls the name and cals
+            currentWorkout.cals;
+
+            console.log(currentWorkout.name + " - " + currentWorkout.cals + " calories");
+        }
+    }
 } 
