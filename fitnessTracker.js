@@ -9,11 +9,13 @@ const userPrompt = require("prompt-sync")(); //plugging-in package
 
 let workouts = [];
 let answer = userPrompt;
+let hiBurnCounter = 0;
+let totalCals = 0;
 //userPrompt -> gets input from the user
 //.toLowerCase ->converts string to lower case
 while (answer !== "exit") {  //Loop to check whether user is done using the program
    
-    console.log("You can: add, view or exit");
+    console.log("You can: add, view, stats or exit");
     answer = userPrompt("What would you like to do? ").toLowerCase();
     
     if (answer === "add") {
@@ -35,7 +37,7 @@ while (answer !== "exit") {  //Loop to check whether user is done using the prog
     }
 
     if (answer === "view") {
-        
+
 //1. user types view.
 //2. loop starts. 
 //3. get workout at position i. 
@@ -50,6 +52,21 @@ while (answer !== "exit") {  //Loop to check whether user is done using the prog
             currentWorkout.cals;
 
             console.log(currentWorkout.name + " - " + currentWorkout.cals + " calories");
+        }
+    }
+
+    if (answer === "stats") {
+
+        for( let i = 0; i < workouts.length; i++) {
+            let currentCals = workouts[i];
+
+            currentCals.cals;
+            totalCals = totalCals + currentCals;
+
+            if (cals > 300) {
+                hiBurnCounter++;
+            }
+            console.log(currentCals.cals);
         }
     }
 } 
