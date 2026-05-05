@@ -1,3 +1,9 @@
+//v2.0 with refactoring if statements into functions
+//main loop
+//I___ addWorkout()
+//I___ viewWorkouts()
+//I___ showStats()
+
 //Project Goal:
 //- Asks user what they want to do.
 //Lets them:
@@ -17,9 +23,9 @@ while (answer !== "exit") {  //Loop to check whether user is done using the prog
     console.log("You can: add, view, stats or exit");
     answer = userPrompt("What would you like to do? ").toLowerCase();
     
-    if (answer === "add") {
-       
-        console.log("What would you like to name this workout? ");
+    function addWorkout() {
+
+         console.log("What would you like to name this workout? ");
         let name = userPrompt("Workout name: ");
         console.log("How many cals did you burn during it: ");
         let cals = userPrompt("Cals burned: ");
@@ -32,10 +38,9 @@ while (answer !== "exit") {  //Loop to check whether user is done using the prog
         };
 
         workouts.push(workout); //pushes workouts to array
-        console.log(workouts);
     }
 
-    if (answer === "view") {
+    function viewWorkouts() {
 
 //1. user types view.
 //2. loop starts. 
@@ -50,11 +55,11 @@ while (answer !== "exit") {  //Loop to check whether user is done using the prog
             currentWorkout.name; //this accesses the array and calls the name and cals
             currentWorkout.cals;
 
-            console.log(currentWorkout.name + " - " + currentWorkout.cals + " calories");
+            console.log(i + ". " + currentWorkout.name + " -> " + currentWorkout.cals + " calories");
         }
     }
 
-    if (answer === "stats") {
+    function showStats() {
 
         let hiBurnCounter = 0;
         let currentCals = 0;
@@ -83,5 +88,20 @@ while (answer !== "exit") {  //Loop to check whether user is done using the prog
             console.log("Average calories: " + avg);
             console.log("High-burn workouts: " + hiBurnCounter);
         }
+    }
+
+    if (answer === "add") {
+       
+        addWorkout();
+    }
+
+    if (answer === "view") {
+        
+        viewWorkouts();
+    }
+
+    if (answer === "stats") {
+
+        showStats();
     }
 } 
