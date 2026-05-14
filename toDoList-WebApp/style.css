@@ -1,12 +1,21 @@
 h1 {
     color: red;
-}
+    margin-bottom: 20px; /*Adds space outside the element*/
+}                        /*In this case below the heading*/
 
 body {
     background-color: lightblue;
+    text-align: center;
 }
 
+input {
+    border: 2px solid black; /*Thickness, line style, colour*/
+    padding: 10px;
+    width: 200px;
+    margin-right: 10px;
+}    
 button {
+    padding: 10px; /*Adds space inside the element*/
     background-color: black;
     color: whitesmoke;
 }

@@ -1,22 +1,24 @@
 <html> <!--encloses the entire webpage-->
-
+    
     <head>
         <title>My To-Do App</title>
         <link rel="stylesheet" href="style.css"> <!--Links the CSS to the HTML-->
     </head>
 
     <body>
-        <h1>My To-Do App</h1> 
-        <!--Heading above-->
-        <div> <!-- div is a container for data, most common one used-->
+        <div class="container"> <!-- div is a container for data, most common one used-->
+            <h1>My To-Do App</h1> 
             <input placeholder="Enter task here"> 
-            <button>Submit</button>
+            
+            <button id="submitButton">Submit</button>
+
+            <ul> <!--Unordered list-->
+                <li>Walk the dog</li> <!--List items-->
+                <li>Call grandma</li>
+                <li>Become black belt of html</li>
+            </ul>
         </div>
-   
-        <ul> <!--Unordered list-->
-            <li>Walk the dog</li> <!--List items-->
-            <li>Call grandma</li>
-            <li>become black belt of html</li>
-        </ul>
+
+       <script src="script.js"></script> <!--Links .js to html-->
     </body>
 </html>
