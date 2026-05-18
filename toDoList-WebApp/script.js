@@ -5,9 +5,18 @@ let input = document.getElementById("taskInput");
 let taskList = document.getElementById("taskList");
 
 button.addEventListener("click", function() {
-    let newTask = document.createElement("li");
-    newTask.textContent = input.value;
-    taskList.appendChild(newTask);
-    console.log("Button clicked");
-    console.log(input.value);
+    
+
+    if (input.value.trim() != "") {
+        let newTask = document.createElement("li");
+        newTask.textContent = input.value;
+        taskList.appendChild(newTask);
+        input.value = "";
+        console.log("Button clicked");
+        console.log(input.value);
+    } else {
+        console.log("Invalid input");
+        return;
+    }
+    
 });
